@@ -38,6 +38,13 @@ public class LoginPage extends PageObject {
     @FindBy(className = "icon-menu")
     private WebElement menuButton;
 
+    @FindBy(className = "icon-cancel")
+    private WebElement canelButton;
+
+    @FindBy(className = "show")
+    private List<WebElement> leftnavigationMenu;
+
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -52,12 +59,15 @@ public class LoginPage extends PageObject {
         this.passwordField.sendKeys(password);
     }
 
-
     public void clickSignInBuuton(){
         loginButton.click();
     }
 
-    public void  clickMenuButton(){
+    public void clickCanelButton(){
+        canelButton.click();
+    }
+
+    public void clickMenuButton(){
         menuButton.click();
     }
 
@@ -67,5 +77,25 @@ public class LoginPage extends PageObject {
 
     public void setPopupMessages(List<WebElement> popupMessages) {
         this.popupMessages = popupMessages;
+    }
+
+    public List<WebElement> getLeftnavigationMenu(){
+        return leftnavigationMenu;
+    }
+
+    public void clickMainPageButton(){
+        leftnavigationMenu.get(0).click();
+    }
+
+    public WebElement getMenuButton() {
+        return menuButton;
+    }
+
+    public WebElement getCanelButton() {
+        return canelButton;
+    }
+
+    public boolean isMenuVisible() {
+        return leftnavigationMenu.get(0).isDisplayed();
     }
 }
