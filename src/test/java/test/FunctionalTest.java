@@ -7,7 +7,7 @@ import org.junit.After;
         import org.openqa.selenium.chrome.ChromeDriver;
         import org.openqa.selenium.support.ui.FluentWait;
 
-        import java.util.NoSuchElementException;
+import java.util.NoSuchElementException;
         import java.util.concurrent.TimeUnit;
 
 public class FunctionalTest {
@@ -36,4 +36,5 @@ public class FunctionalTest {
     public static void tearDown(){
         driver.quit();
     }
+
 }

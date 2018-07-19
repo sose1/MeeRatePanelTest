@@ -8,14 +8,15 @@ import page.PageObject;
 
 import java.util.List;
 
-public class LoginPage extends PageObject {
+public class PanelLoginPage extends PageObject {
 
     //todo testowe zmienne
 
     public static final String URL = "http://127.0.0.1/site/login";
     public static final String TEST_INCORRECT_EMAIL = "zlyemail";
-    public static final String TEST_CORRECT_EMAIL = "cfsdfo@co.pl";
-    public static final String TEST_PASSWORD = "start123";
+    public static final String TEST_EMAIL = "cfsdfo@co.pl";
+    public static final String TEST_PASSWORD = "MRr4NJwc";
+    public static final String TEST_CORRECT_EMAIL = "test@test.pl";
     public static final String EMPTY_EMAIL_MESSAGE = "Email nie może pozostać bez wartości.";
     public static final String EMPTY_PASSWORD_MESSAGE = "Hasło nie może pozostać bez wartości.";
     public static final String INCORRECT_EMAIL_MESSAGE = "Email nie zawiera prawidłowego adresu email.";
@@ -45,7 +46,7 @@ public class LoginPage extends PageObject {
     private List<WebElement> leftnavigationMenu;
 
 
-    public LoginPage(WebDriver driver) {
+    public PanelLoginPage(WebDriver driver) {
         super(driver);
     }
 
@@ -97,5 +98,12 @@ public class LoginPage extends PageObject {
 
     public boolean isMenuVisible() {
         return leftnavigationMenu.get(0).isDisplayed();
+    }
+
+    public void loginAsSuperAdmin(){
+        driver.get(PanelLoginPage.URL);
+        enterEmail(PanelLoginPage.TEST_CORRECT_EMAIL);
+        enterPassword(PanelLoginPage.TEST_PASSWORD);
+        clickSignInBuuton();
     }
 }
