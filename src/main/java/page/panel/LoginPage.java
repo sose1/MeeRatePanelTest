@@ -5,14 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.PageObject;
-
 import java.util.List;
 
 public class LoginPage extends PageObject {
 
     //todo testowe zmienne
 
-    public static final String URL = "http://127.0.0.1/site/login";
+    public static final String URL = URL_BASE_PANEL + "/site/login";
     public static final String TEST_INCORRECT_EMAIL = "zlyemail";
     public static final String TEST_CORRECT_EMAIL = "cfsdfo@co.pl";
     public static final String TEST_PASSWORD = "start123";
