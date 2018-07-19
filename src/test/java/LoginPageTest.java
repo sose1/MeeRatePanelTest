@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import page.LoginPage;
 import sun.java2d.pipe.AAShapePipe;
@@ -53,5 +54,34 @@ public class LoginPageTest extends FunctionalTest {
         }
 
         Assert.assertEquals(LoginPage.WRONG_USER_MESSAGE, loginPage.getPopupMessages().get(0).getText());
+    }
+
+    @Test
+    public void testClickCanelButton(){
+        driver.get(LoginPage.URL);
+
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.clickCanelButton();
+
+        wait.until(ExpectedConditions.visibilityOf(loginPage.getMenuButton()));
+        Assert.assertTrue(!loginPage.isMenuVisible());
+    }
+
+    @Test
+    public void testClickMenuButton(){
+        driver.get(LoginPage.URL);
+
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.clickCanelButton();
+
+
+        wait.until(ExpectedConditions.visibilityOf(loginPage.getMenuButton()));
+
+        loginPage.clickMenuButton();
+
+
+
     }
 }
