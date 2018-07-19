@@ -1,3 +1,5 @@
+package test;
+
 import org.junit.After;
         import org.junit.AfterClass;
         import org.junit.BeforeClass;
@@ -10,8 +12,8 @@ import org.junit.After;
 
 public class FunctionalTest {
 
-    static WebDriver driver;
-    static  FluentWait<WebDriver> wait;
+    public static WebDriver driver;
+    public static FluentWait<WebDriver> wait;
 
     @BeforeClass
     public static void setUp(){
