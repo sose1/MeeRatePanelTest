@@ -5,11 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.PageObject;
 
-import java.util.List;
-
 public class PanelMainPage extends PageObject {
-
-    public static final String URL = PageObject.URL_BASE_PANEL + "/site/index";
+    public static final String URL = URL_BASE_PANEL + "/site/index";
 
     @FindBy(id = "id-for-tester-1")
     private WebElement eventButton;

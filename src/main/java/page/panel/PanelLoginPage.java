@@ -1,6 +1,5 @@
 package page.panel;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,9 +7,6 @@ import page.PageObject;
 import java.util.List;
 
 public class PanelLoginPage extends PageObject {
-
-    //todo testowe zmienne
-
     public static final String URL = URL_BASE_PANEL + "/site/login";
     public static final String TEST_INCORRECT_EMAIL = "zlyemail";
     public static final String TEST_EMAIL = "cfsdfo@co.pl";
@@ -20,7 +16,6 @@ public class PanelLoginPage extends PageObject {
     public static final String EMPTY_PASSWORD_MESSAGE = "Hasło nie może pozostać bez wartości.";
     public static final String INCORRECT_EMAIL_MESSAGE = "Email nie zawiera prawidłowego adresu email.";
     public static final String WRONG_USER_MESSAGE = "Niepoprawny email lub hasło";
-
 
     @FindBy(id = "loginform-username")
     private WebElement emailField;
@@ -58,7 +53,7 @@ public class PanelLoginPage extends PageObject {
         this.passwordField.sendKeys(password);
     }
 
-    public void clickSignInBuuton(){
+    public void clickSignInButton(){
         loginButton.click();
     }
 
@@ -102,6 +97,6 @@ public class PanelLoginPage extends PageObject {
         driver.get(PanelLoginPage.URL);
         enterEmail(PanelLoginPage.TEST_CORRECT_EMAIL);
         enterPassword(PanelLoginPage.TEST_PASSWORD);
-        clickSignInBuuton();
+        clickSignInButton();
     }
 }

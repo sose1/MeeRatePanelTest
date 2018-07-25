@@ -6,12 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.PageObject;
-
 import java.util.List;
 
 public class PanelEventPage extends PageObject {
 
-    public static final String URL = PageObject.URL_BASE_PANEL + "/events/index";
+    public static final String URL = URL_BASE_PANEL + "/events/index";
 
     @FindBy(className = "add-btn")
     private WebElement addEventButton;

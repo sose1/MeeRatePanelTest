@@ -5,17 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.PageObject;
-
 import java.util.List;
 
 public class PanelEventCreatePage extends PageObject {
-
-    public static final String URL = "http://127.0.0.1/events/create";
+    public static final String URL = URL_BASE_PANEL + "/events/create";
     public static final String EMPTY_NAME_EVENT = "Nazwa Wydarzenia nie może pozostać bez wartości.";
     public static final String EMPTY_INFO_EVENT = "Opis nie może pozostać bez wartości.";
     public static final String EMPTY_START_DATE_EVENT = "Początek nie może pozostać bez wartości.";
     public static final String EMPTY_END_DATE_EVENT = "Zakończenie nie może pozostać bez wartości.";
-
 
     private String location = "RST Software Masters, Esperantystów, Świdnica, Polska";
     private String startDate = "2018-12-01 00:00:00";

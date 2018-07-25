@@ -17,8 +17,8 @@ public class PanelLoginPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
 
         panelLoginPage.enterEmail(PanelLoginPage.TEST_CORRECT_EMAIL);
-        panelLoginPage.enterPassword(panelLoginPage.TEST_PASSWORD);
-        panelLoginPage.clickSignInBuuton();
+        panelLoginPage.enterPassword(PanelLoginPage.TEST_PASSWORD);
+        panelLoginPage.clickSignInButton();
 
         wait.until(ExpectedConditions.titleIs("main view"));
 
@@ -32,7 +32,7 @@ public class PanelLoginPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(FunctionalTest.driver);
 
         panelLoginPage.enterEmail(PanelLoginPage.TEST_EMAIL);
-        panelLoginPage.clickSignInBuuton();
+        panelLoginPage.clickSignInButton();
 
         wait.until(ExpectedConditions.visibilityOf(panelLoginPage.getPopupMessages().get(1)));
 
@@ -47,7 +47,7 @@ public class PanelLoginPageTest extends FunctionalTest {
 
         panelLoginPage.enterEmail(PanelLoginPage.TEST_INCORRECT_EMAIL);
         panelLoginPage.enterPassword(PanelLoginPage.TEST_PASSWORD);
-        panelLoginPage.clickSignInBuuton();
+        panelLoginPage.clickSignInButton();
 
         wait.until(ExpectedConditions.visibilityOf(panelLoginPage.getPopupMessages().get(0)));
 
@@ -62,7 +62,7 @@ public class PanelLoginPageTest extends FunctionalTest {
 
         panelLoginPage.enterEmail(PanelLoginPage.TEST_EMAIL);
         panelLoginPage.enterPassword(PanelLoginPage.TEST_PASSWORD);
-        panelLoginPage.clickSignInBuuton();
+        panelLoginPage.clickSignInButton();
 
         try {
             wait.until(ExpectedConditions.visibilityOf(panelLoginPage.getPopupMessages().get(1)));

@@ -8,21 +8,16 @@ import page.PageObject;
 
 import java.util.List;
 
-
 public class PanelUserCreatePage extends PageObject {
-
-    public static final String URL = "http://127.0.0.1/users/create";
+    public static final String URL = URL_BASE_PANEL + "/users/create";
     public static final String INVALID_EMAIL = "Email nie zawiera prawidłowego adresu email.";
     public static final String EMPTY_EMAIL = "Email nie może pozostać bez wartości.";
     public static final String EMPTY_USER_TYPE = "Typ konta nie może pozostać bez wartości.";
     public static final String EMPTY_USER_NAME = "Nazwa użytkownika nie może pozostać bez wartości.";
     public static final String INVALID_NAME = "Nazwa użytkownika musi zawierać imię i nazwisko!";
 
-
     private String name = RandomStringUtils.randomAlphabetic(10) + " " + RandomStringUtils.randomAlphabetic(8);
     private String email = RandomStringUtils.randomAlphanumeric(15) + "@co.pl";
-
-
 
     @FindBy(className = "icon-menu")
     private WebElement menuButton;

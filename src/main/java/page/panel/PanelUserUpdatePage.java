@@ -9,7 +9,6 @@ import page.PageObject;
 import java.util.List;
 
 public class PanelUserUpdatePage extends PageObject {
-
     public static final String TITLE_PAGE = "Zaktualizuj informacje o użytkowniku";
 
     private String newName = RandomStringUtils.randomAlphabetic(10) + " " + RandomStringUtils.randomAlphabetic(8);

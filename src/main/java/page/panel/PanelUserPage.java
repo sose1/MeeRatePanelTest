@@ -1,7 +1,5 @@
 package page.panel;
 
-
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +9,8 @@ import page.PageObject;
 
 import java.util.List;
 
-
 public class PanelUserPage extends PageObject {
-
-
-    public static final String URL = "http://127.0.0.1/users/index";
+    public static final String URL = URL_BASE_PANEL + "/users/index";
 
     @FindBy(className = "add-btn")
     private WebElement createUserButton;

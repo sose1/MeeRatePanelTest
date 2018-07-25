@@ -3,17 +3,12 @@ package test.panel;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import page.panel.PanelLoginPage;
 import page.panel.PanelUserCreatePage;
 import page.panel.PanelUserPage;
 import page.panel.PanelUserUpdatePage;
 import test.FunctionalTest;
-
-import java.util.List;
 
 
 public class PanelUserPageTest extends FunctionalTest {

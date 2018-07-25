@@ -4,11 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.PageObject;
-
 import java.util.List;
 
 public class MainPage extends PageObject {
-
     public static final String URL = PageObject.URL_BASE_MAIN;
 
     //główne przyciski
