@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PanelMainPage extends PageObject {
 
-    public static final String URL = "http://127.0.0.1/site/index";
+    public static final String URL = PageObject.URL_BASE_PANEL + "/site/index";
 
     @FindBy(id = "id-for-tester-1")
     private WebElement eventButton;
