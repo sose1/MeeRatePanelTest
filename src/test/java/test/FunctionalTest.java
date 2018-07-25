@@ -1,11 +1,16 @@
 package test;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import page.panel.PanelUserCreatePage;
+import page.panel.PanelUserPage;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
@@ -35,5 +40,4 @@ public class FunctionalTest {
     public static void tearDown(){
         driver.quit();
     }
-
 }
