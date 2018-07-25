@@ -15,14 +15,13 @@ public class PanelLoginPage extends PageObject {
     public static final String URL = "http://127.0.0.1/site/login";
     public static final String TEST_INCORRECT_EMAIL = "zlyemail";
     public static final String TEST_EMAIL = "cfsdfo@co.pl";
-    public static final String TEST_PASSWORD = "MRr4NJwc";
-    public static final String TEST_CORRECT_EMAIL = "test@test.pl";
+    public static final String TEST_PASSWORD = "16k7C9r4";
+    public static final String TEST_CORRECT_EMAIL = "zz75sbu8nvnh@10minut.xyz";
     public static final String EMPTY_EMAIL_MESSAGE = "Email nie może pozostać bez wartości.";
     public static final String EMPTY_PASSWORD_MESSAGE = "Hasło nie może pozostać bez wartości.";
     public static final String INCORRECT_EMAIL_MESSAGE = "Email nie zawiera prawidłowego adresu email.";
     public static final String WRONG_USER_MESSAGE = "Niepoprawny email lub hasło";
 
-    //todo pola tekstowe
 
     @FindBy(id = "loginform-username")
     private WebElement emailField;
@@ -43,7 +42,7 @@ public class PanelLoginPage extends PageObject {
     private WebElement canelButton;
 
     @FindBy(className = "show")
-    private List<WebElement> leftnavigationMenu;
+    private List<WebElement> leftNavigationMenu;
 
 
     public PanelLoginPage(WebDriver driver) {
@@ -80,12 +79,12 @@ public class PanelLoginPage extends PageObject {
         this.popupMessages = popupMessages;
     }
 
-    public List<WebElement> getLeftnavigationMenu(){
-        return leftnavigationMenu;
+    public List<WebElement> getLeftNavigationMenu(){
+        return leftNavigationMenu;
     }
 
     public void clickMainPageButton(){
-        leftnavigationMenu.get(0).click();
+        leftNavigationMenu.get(0).click();
     }
 
     public WebElement getMenuButton() {
@@ -97,7 +96,7 @@ public class PanelLoginPage extends PageObject {
     }
 
     public boolean isMenuVisible() {
-        return leftnavigationMenu.get(0).isDisplayed();
+        return leftNavigationMenu.get(0).isDisplayed();
     }
 
     public void loginAsSuperAdmin(){

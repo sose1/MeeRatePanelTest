@@ -11,7 +11,7 @@ import test.FunctionalTest;
 public class PanelLoginPageTest extends FunctionalTest {
 
     @Test
-    public void testCorrectUSer(){
+    public void testCorrectUser(){
         driver.get(PanelLoginPage.URL);
 
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
@@ -97,8 +97,6 @@ public class PanelLoginPageTest extends FunctionalTest {
         wait.until(ExpectedConditions.visibilityOf(panelLoginPage.getMenuButton()));
 
         panelLoginPage.clickMenuButton();
-
-
 
     }
 }
