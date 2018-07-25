@@ -13,7 +13,7 @@ public class MainPage extends PageObject {
 
     //główne przyciski
 
-    @FindBy(id = "menubutton")
+    @FindBy(id = "menuButton")
     private WebElement menuButtonOpen;
 
     @FindBy(id = "contactButton")

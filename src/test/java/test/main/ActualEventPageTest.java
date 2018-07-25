@@ -106,7 +106,7 @@ public class ActualEventPageTest extends FunctionalTest {
 
         //sprawdzanie flasha
         wait.until(ExpectedConditions.visibilityOf(eventPage.getSadPrompt()));
-        Assert.assertEquals("Musisz wybrać ocenę.", eventPage.getSadPrompt().getText());
+        Assert.assertEquals("Musisz wystawić ocenę.", eventPage.getSadPrompt().getText());
     }
 
     @Test
@@ -212,7 +212,7 @@ public class ActualEventPageTest extends FunctionalTest {
 
         //sprawdzanie flasha
         wait.until(ExpectedConditions.visibilityOf(eventPage.getSadPrompt()));
-        Assert.assertEquals("Musisz wybrać ocenę.", eventPage.getSadPrompt().getText());
+        Assert.assertEquals("Uzupełnij pole tekstowe.", eventPage.getSadPrompt().getText());
     }
 
     @Test

@@ -46,7 +46,7 @@ public class MainPageTest extends FunctionalTest {
         wait.until(ExpectedConditions.visibilityOf(mainPage.getMainContactButton()));
         mainPage.clickMainContactButton();
 
-        Assert.assertEquals(MainContactPage.URL, driver.getCurrentUrl());
+        Assert.assertEquals(MainContactPage.URL + ".html", driver.getCurrentUrl());
     }
 
     //todo testy poszczególnych eventów
