@@ -13,7 +13,7 @@ public class MainPage extends PageObject {
 
     //główne przyciski
 
-    @FindBy(id = "menuutton")
+    @FindBy(id = "menubutton")
     private WebElement menuButtonOpen;
 
     @FindBy(id = "contactButton")
@@ -49,6 +49,24 @@ public class MainPage extends PageObject {
 
     public void clickMainContactButton(){
         mainContactButton.click();
+    }
+
+    public String clickFirstActualEvent(){
+        String eventId = actualEvents.get(0).getAttribute("id");
+        actualEvents.get(0).click();
+        return eventId;
+    }
+
+    public String clickFirstFutureEvent() {
+        String eventId = futureEvents.get(0).getAttribute("id");
+        futureEvents.get(0).click();
+        return eventId;
+    }
+
+    public String clickFirstArchiveEvent() {
+        String eventId = archiveEvents.get(0).getAttribute("id");
+        archiveEvents.get(0).click();
+        return eventId;
     }
 
     public WebElement getMenuButtonOpen() {
