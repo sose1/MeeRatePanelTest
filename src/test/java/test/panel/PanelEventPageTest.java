@@ -14,7 +14,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventPage.URL);
         PanelEventPage panelEventPage = new PanelEventPage(driver);
@@ -30,7 +31,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -62,7 +64,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -101,7 +104,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -140,7 +144,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -180,7 +185,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -219,7 +225,7 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -259,7 +265,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -299,7 +306,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -339,7 +347,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -379,7 +388,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -422,7 +432,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -465,7 +476,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -507,7 +519,8 @@ public class PanelEventPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);

@@ -20,7 +20,8 @@ public class PanelLoginPageTest extends FunctionalTest {
         panelLoginPage.enterPassword(PanelLoginPage.TEST_PASSWORD);
         panelLoginPage.clickSignInButton();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         Assert.assertEquals(PanelMainPage.URL, driver.getCurrentUrl());
     }

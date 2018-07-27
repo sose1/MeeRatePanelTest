@@ -3,11 +3,20 @@ package test.panel;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import page.panel.PanelEventCreatePage;
 import page.panel.PanelEventPage;
 import page.panel.PanelLoginPage;
+import page.panel.PanelMainPage;
 import test.FunctionalTest;
+
+import java.io.File;
 
 public class PanelEventCreatePageTest extends FunctionalTest {
 
@@ -16,7 +25,7 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -40,7 +49,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -63,7 +73,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -86,7 +97,7 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -109,7 +120,7 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -132,7 +143,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -155,7 +167,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -180,7 +193,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -205,7 +219,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -228,7 +243,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -252,7 +268,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -276,7 +293,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -300,7 +318,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
@@ -323,7 +342,8 @@ public class PanelEventCreatePageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelEventCreatePage.URL);
         PanelEventCreatePage panelEventCreatePage = new PanelEventCreatePage(driver);
