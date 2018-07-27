@@ -8,7 +8,10 @@ import page.PageObject;
 
 public class EventPage extends PageObject {
     public String URL;
-    private String eventId;
+
+    public static final String FILL_RATE_PROMPT_MESSAGE = "Proszę wystawić ocenę.";
+    public static final String SERVER_ERROR_MESSAGE = "Błąd serwera!";
+    public static final String SUCCESSFUL_RATE_MESSAGE = "Dziękujemy!";
 
     //przyciski
 
@@ -78,172 +81,90 @@ public class EventPage extends PageObject {
 
     public EventPage(WebDriver driver, String eventId) {
         super(driver);
-        this.eventId = eventId;
         this.URL = URL_BASE_MAIN + "/" + eventId;
-    }
-
-    public WebElement getTalk(int id){
-        return talkOrderedList.findElements(By.tagName("li")).get(id);
     }
 
     public void clickInformationTabButton(){
         informationTabButton.click();
     }
 
+    public void clickEventRate(){
+        eventRateButtons.findElements(By.tagName("label")).get(0).click();
+    }
+
+    public void clickMapButton(){
+        this.getPlaceSection()
+                .findElement(By.className("row"))
+                .findElement(By.tagName("p"))
+                .findElement(By.tagName("a")).click();
+    }
+
     public WebElement getBackButton() {
         return backButton;
     }
 
-    public void setBackButton(WebElement backButton) {
-        this.backButton = backButton;
+    public WebElement getTalk(int id){
+        return talkOrderedList.findElements(By.tagName("li")).get(id);
     }
 
     public WebElement getSpeakersRateSection() {
         return speakersRateSection;
     }
 
-    public void setSpeakersRateSection(WebElement speakersRateSection) {
-        this.speakersRateSection = speakersRateSection;
-    }
-
     public WebElement getInformationTabButton() {
         return informationTabButton;
-    }
-
-    public void setInformationTabButton(WebElement informationTabButton) {
-        this.informationTabButton = informationTabButton;
-    }
-
-    public WebElement getResultsTabButton() {
-        return resultsTabButton;
-    }
-
-    public void setResultsTabButton(WebElement resultsTabButton) {
-        this.resultsTabButton = resultsTabButton;
     }
 
     public WebElement getAboutSection() {
         return aboutSection;
     }
 
-    public void setAboutSection(WebElement aboutSection) {
-        this.aboutSection = aboutSection;
-    }
-
-    public String getEventId() {
-        return eventId;
-    }
-
-    public void setEventId(String eventId) {
-        this.eventId = eventId;
-    }
-
     public WebElement getInformationWindow() {
         return informationWindow;
-    }
-
-    public void setInformationWindow(WebElement informationWindow) {
-        this.informationWindow = informationWindow;
-    }
-
-    public void clickEventRate(){
-        eventRateButtons.findElements(By.tagName("label")).get(0).click();
     }
 
     public WebElement getHappyPrompt() {
         return happyPrompt;
     }
 
-    public void setHappyPrompt(WebElement happyPrompt) {
-        this.happyPrompt = happyPrompt;
-    }
-
     public WebElement getSadPrompt() {
         return sadPrompt;
-    }
-
-    public void setSadPrompt(WebElement sadPrompt) {
-        this.sadPrompt = sadPrompt;
     }
 
     public WebElement getBlasePrompt() {
         return blasePrompt;
     }
 
-    public void setBlasePrompt(WebElement blasePrompt) {
-        this.blasePrompt = blasePrompt;
-    }
-
-    public WebElement getTalkOrderedList() {
-        return talkOrderedList;
-    }
-
-    public void setTalkOrderedList(WebElement talkOrderedList) {
-        this.talkOrderedList = talkOrderedList;
-    }
-
     public WebElement getFeedBackOpinionSection() {
         return feedBackOpinionSection;
-    }
-
-    public void setFeedBackOpinionSection(WebElement feedBackOpinionSection) {
-        this.feedBackOpinionSection = feedBackOpinionSection;
     }
 
     public WebElement getEventRateSection() {
         return eventRateSection;
     }
 
-    public void setEventRateSection(WebElement eventRateSection) {
-        this.eventRateSection = eventRateSection;
-    }
-
     public WebElement getAskQuestionSection() {
         return askQuestionSection;
-    }
-
-    public void setAskQuestionSection(WebElement askQuestionSection) {
-        this.askQuestionSection = askQuestionSection;
     }
 
     public WebElement getTalkRateSection() {
         return talkRateSection;
     }
 
-    public void setTalkRateSection(WebElement talkRateSection) {
-        this.talkRateSection = talkRateSection;
-    }
-
     public WebElement getTalkMoreSection() {
         return talkMoreSection;
-    }
-
-    public void setTalkMoreSection(WebElement talkMoreSection) {
-        this.talkMoreSection = talkMoreSection;
     }
 
     public WebElement getPlaceSection() {
         return placeSection;
     }
 
-    public void setPlaceSection(WebElement placeSection) {
-        this.placeSection = placeSection;
-    }
-
     public WebElement getDateSection() {
         return dateSection;
     }
 
-    public void setDateSection(WebElement dateSection) {
-        this.dateSection = dateSection;
-    }
-
     public WebElement getAgendaSection() {
         return agendaSection;
-    }
-
-    public void setAgendaSection(WebElement agendaSection) {
-        this.agendaSection = agendaSection;
     }
 
     public WebElement getRessultsWindow() {

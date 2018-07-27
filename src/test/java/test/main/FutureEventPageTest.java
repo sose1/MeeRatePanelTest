@@ -3,7 +3,6 @@ package test.main;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import page.main.EventPage;
 import page.main.MainPage;
@@ -26,10 +25,7 @@ public class FutureEventPageTest extends FunctionalTest {
         EventPage eventPage = new EventPage(driver, eventId);
         driver.get(eventPage.URL);
 
-        eventPage.getPlaceSection()
-                .findElement(By.className("row"))
-                .findElement(By.tagName("p"))
-                .findElement(By.tagName("a")).click();
+        eventPage.clickMapButton();
 
         ArrayList<String> tabs = new ArrayList(driver.getWindowHandles());
 

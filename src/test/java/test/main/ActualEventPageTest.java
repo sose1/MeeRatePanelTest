@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import page.main.EventPage;
 import page.main.MainPage;
 import test.FunctionalTest;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,10 +53,7 @@ public class ActualEventPageTest extends FunctionalTest {
         wait.until(ExpectedConditions.visibilityOf(eventPage.getInformationTabButton()));
         eventPage.clickInformationTabButton();
 
-        eventPage.getPlaceSection()
-                .findElement(By.className("row"))
-                .findElement(By.tagName("p"))
-                .findElement(By.tagName("a")).click();
+        eventPage.clickMapButton();
 
         ArrayList<String> tabs = new ArrayList(driver.getWindowHandles());
 
@@ -94,7 +90,7 @@ public class ActualEventPageTest extends FunctionalTest {
 
         //sprawdzanie flasha
         wait.until(ExpectedConditions.visibilityOf(eventPage.getBlasePrompt()));
-        Assert.assertEquals("Błąd serwera!", eventPage.getBlasePrompt().getText());
+        Assert.assertEquals(EventPage.SERVER_ERROR_MESSAGE, eventPage.getBlasePrompt().getText());
     }
 
     @Test
@@ -106,7 +102,7 @@ public class ActualEventPageTest extends FunctionalTest {
 
         //sprawdzanie flasha
         wait.until(ExpectedConditions.visibilityOf(eventPage.getSadPrompt()));
-        Assert.assertEquals("Musisz wystawić ocenę.", eventPage.getSadPrompt().getText());
+        Assert.assertEquals(EventPage.FILL_RATE_PROMPT_MESSAGE, eventPage.getSadPrompt().getText());
     }
 
     @Test
@@ -167,7 +163,7 @@ public class ActualEventPageTest extends FunctionalTest {
 
         //sprawdzanie flasha
         wait.until(ExpectedConditions.visibilityOf(eventPage.getSadPrompt()));
-        Assert.assertEquals("Musisz wybrać ocenę.", eventPage.getSadPrompt().getText());
+        Assert.assertEquals(EventPage.FILL_RATE_PROMPT_MESSAGE, eventPage.getSadPrompt().getText());
     }
 
     @Test
@@ -237,7 +233,7 @@ public class ActualEventPageTest extends FunctionalTest {
 
         //sprawdzanie flasha
         wait.until(ExpectedConditions.visibilityOf(eventPage.getHappyPrompt()));
-        Assert.assertEquals("Dziękujemy!", eventPage.getHappyPrompt().getText());
+        Assert.assertEquals(EventPage.SUCCESSFUL_RATE_MESSAGE, eventPage.getHappyPrompt().getText());
     }
 
     @Test
