@@ -48,6 +48,8 @@ public class PanelEventCreatePage extends PageObject {
     @FindBy(className = "add-event-btn")
     private WebElement addEventButton;
 
+
+
     public void enterNameEvent(){
         this.nameEventField.clear();
         this.nameEventField.sendKeys(nameEvent);
@@ -118,5 +120,6 @@ public class PanelEventCreatePage extends PageObject {
     public PanelEventCreatePage(WebDriver driver) {
         super(driver);
     }
+
 
 }

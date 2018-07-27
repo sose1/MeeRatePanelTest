@@ -53,25 +53,24 @@ public class PanelEventPage extends PageObject {
         int row = 0;
 
         boolean done = false;
-        for (WebElement tableRow : rows) {
-            if (row == 0){
-                row ++;
-                continue;
-            }
-            row++;
-            if (tableRow.findElements(By.tagName("td")).get(0).getText().equalsIgnoreCase(name)){
-                done = true;
+        for (int i = rows.size() - 1; i >= 0; i--) {
+            if (i == 0){
                 break;
             }
-
+            if (rows.get(i).findElements(By.tagName("td")).get(0).getText().equalsIgnoreCase(name)){
+                done = true;
+                row = i;
+                break;
+            }
         }
 
         if (!done){
             Assert.fail();
         }
 
+
         WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[8]"));
-        thirdCell.findElement(By.className("btn-dark")).click();
+        thirdCell.findElement(By.className("sadPrompt")).click();
         Assert.assertEquals(PanelEventUpdatePage.TITLE_PAGE, driver.getTitle());
     }
 
@@ -80,18 +79,15 @@ public class PanelEventPage extends PageObject {
         int row = 0;
 
         boolean done = false;
-        for (WebElement tableRow : rows) {
-            if (row == 0){
-                row ++;
-                continue;
-            }
-
-            row++;
-            if (tableRow.findElements(By.tagName("td")).get(0).getText().equalsIgnoreCase(name)){
-                done = true;
+        for (int i = rows.size() - 1; i >= 0; i--) {
+            if (i == 0){
                 break;
             }
-
+            if (rows.get(i).findElements(By.tagName("td")).get(0).getText().equalsIgnoreCase(name)){
+                done = true;
+                row = i;
+                break;
+            }
         }
 
         if (!done){
@@ -99,7 +95,7 @@ public class PanelEventPage extends PageObject {
         }
 
         WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[8]"));
-        thirdCell.findElement(By.className("btn-danger")).click();
+        thirdCell.findElement(By.className("blasePrompt")).click();
         Assert.assertTrue(this.getFlashMessage().isDisplayed());
     }
 }

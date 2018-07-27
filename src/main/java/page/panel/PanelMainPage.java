@@ -7,6 +7,7 @@ import page.PageObject;
 
 public class PanelMainPage extends PageObject {
     public static final String URL = URL_BASE_PANEL + "/site/index";
+    public static final String TITLE = "Strona główna";
 
     @FindBy(id = "id-for-tester-1")
     private WebElement eventButton;

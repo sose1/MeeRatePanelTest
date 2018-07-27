@@ -4,10 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import page.panel.PanelLoginPage;
-import page.panel.PanelUserCreatePage;
-import page.panel.PanelUserPage;
-import page.panel.PanelUserUpdatePage;
+import page.panel.*;
 import test.FunctionalTest;
 
 
@@ -18,7 +15,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -38,7 +36,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -71,7 +70,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -105,7 +105,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -147,7 +148,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -188,7 +190,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -232,7 +235,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -275,7 +279,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -317,7 +322,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -360,7 +366,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -404,7 +411,7 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -446,7 +453,8 @@ public class PanelUserPageTest extends FunctionalTest {
         PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
         panelLoginPage.loginAsSuperAdmin();
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
@@ -491,7 +499,8 @@ public class PanelUserPageTest extends FunctionalTest {
         String email = RandomStringUtils.randomAlphabetic(10) + "@co.pl";
         System.out.println("Utworozno " + email);
 
-        wait.until(ExpectedConditions.titleIs("main view"));
+        wait.until(ExpectedConditions.titleIs(PanelMainPage.TITLE));
+
 
         driver.get(PanelUserPage.URL);
         PanelUserPage panelUserPage = new PanelUserPage(driver);
