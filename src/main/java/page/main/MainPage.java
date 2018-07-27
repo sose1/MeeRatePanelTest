@@ -71,47 +71,23 @@ public class MainPage extends PageObject {
         return menuButtonOpen;
     }
 
-    public void setMenuButtonOpen(WebElement menuButtonOpen) {
-        this.menuButtonOpen = menuButtonOpen;
-    }
-
     public WebElement getMenuButtonClose() {
         return menuButtonClose;
-    }
-
-    public void setMenuButtonClose(WebElement menuButtonClose) {
-        this.menuButtonClose = menuButtonClose;
     }
 
     public List<WebElement> getActualEvents() {
         return actualEvents;
     }
 
-    public void setActualEvents(List<WebElement> actualEvents) {
-        this.actualEvents = actualEvents;
-    }
-
     public List<WebElement> getFutureEvents() {
         return futureEvents;
-    }
-
-    public void setFutureEvents(List<WebElement> futureEvents) {
-        this.futureEvents = futureEvents;
     }
 
     public List<WebElement> getArchiveEvents() {
         return archiveEvents;
     }
 
-    public void setArchiveEvents(List<WebElement> archiveEvents) {
-        this.archiveEvents = archiveEvents;
-    }
-
     public WebElement getMainContactButton() {
         return mainContactButton;
-    }
-
-    public void setMainContactButton(WebElement mainContactButton) {
-        this.mainContactButton = mainContactButton;
     }
 }

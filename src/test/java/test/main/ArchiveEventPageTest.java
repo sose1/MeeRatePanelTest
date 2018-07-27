@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import page.main.EventPage;
 import page.main.MainPage;
 import test.FunctionalTest;
-
 import java.util.ArrayList;
 
 public class ArchiveEventPageTest extends FunctionalTest {
@@ -43,10 +42,7 @@ public class ArchiveEventPageTest extends FunctionalTest {
         wait.until(ExpectedConditions.visibilityOf(eventPage.getInformationTabButton()));
         eventPage.clickInformationTabButton();
 
-        eventPage.getPlaceSection()
-                .findElement(By.className("row"))
-                .findElement(By.tagName("p"))
-                .findElement(By.tagName("a")).click();
+        eventPage.clickMapButton();
 
         ArrayList<String> tabs = new ArrayList(driver.getWindowHandles());
 
