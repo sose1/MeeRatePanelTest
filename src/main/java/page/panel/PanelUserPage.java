@@ -75,7 +75,7 @@ public class PanelUserPage extends PageObject {
 
 
         WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[4]"));
-        thirdCell.findElement(By.className("sadPrompt")).click();
+        thirdCell.findElement(By.className("blasePrompt")).click();
         Assert.assertEquals(PanelUserUpdatePage.TITLE_PAGE, driver.getTitle());
     }
 
@@ -100,7 +100,8 @@ public class PanelUserPage extends PageObject {
         }
 
         WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[4]"));
-        thirdCell.findElement(By.className("blasePrompt")).click();
+        thirdCell.findElement(By.className("sadPrompt")).click();
+        driver.switchTo().alert().accept();
         Assert.assertTrue(this.getFlashMessage().isDisplayed());
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PanelEventCreatePage extends PageObject {
     public static final String URL = URL_BASE_PANEL + "/events/create";
-    public static final String EMPTY_NAME_EVENT = "Nazwa Wydarzenia nie może pozostać bez wartości.";
+    public static final String EMPTY_NAME_EVENT = "Nazwa wydarzenia nie może pozostać bez wartości.";
     public static final String EMPTY_INFO_EVENT = "Opis nie może pozostać bez wartości.";
     public static final String EMPTY_START_DATE_EVENT = "Początek nie może pozostać bez wartości.";
     public static final String EMPTY_END_DATE_EVENT = "Zakończenie nie może pozostać bez wartości.";

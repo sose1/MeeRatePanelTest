@@ -10,7 +10,7 @@ public class PanelLoginPage extends PageObject {
     public static final String URL = URL_BASE_PANEL + "/site/login";
     public static final String TEST_INCORRECT_EMAIL = "zlyemail";
     public static final String TEST_EMAIL = "cfsdfo@co.pl";
-    public static final String TEST_PASSWORD = "16k7C9r4";
+    public static final String TEST_PASSWORD = "=";
     public static final String TEST_CORRECT_EMAIL = "zz75sbu8nvnh@10minut.xyz";
     public static final String EMPTY_EMAIL_MESSAGE = "Email nie może pozostać bez wartości.";
     public static final String EMPTY_PASSWORD_MESSAGE = "Hasło nie może pozostać bez wartości.";
