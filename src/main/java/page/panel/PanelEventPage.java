@@ -12,7 +12,7 @@ public class PanelEventPage extends PageObject {
 
     public static final String URL = URL_BASE_PANEL + "/events/index";
 
-    @FindBy(className = "add-btn")
+    @FindBy(className = "add-event-btn")
     private WebElement addEventButton;
 
     @FindBy(className = "alert-dismissable")
@@ -69,8 +69,8 @@ public class PanelEventPage extends PageObject {
         }
 
 
-        WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[8]"));
-        thirdCell.findElement(By.className("sadPrompt")).click();
+        WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[9]"));
+        thirdCell.findElement(By.className("blasePrompt")).click();
         Assert.assertEquals(PanelEventUpdatePage.TITLE_PAGE, driver.getTitle());
     }
 
@@ -93,9 +93,9 @@ public class PanelEventPage extends PageObject {
         if (!done){
             Assert.fail();
         }
-
-        WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[8]"));
-        thirdCell.findElement(By.className("blasePrompt")).click();
+        WebElement thirdCell = driver.findElement(By.xpath("//table/tbody/tr[ " + row + "]/td[9]"));
+        thirdCell.findElement(By.className("sadPrompt")).click();
+        driver.switchTo().alert().accept();
         Assert.assertTrue(this.getFlashMessage().isDisplayed());
     }
 }

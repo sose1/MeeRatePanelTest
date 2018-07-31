@@ -74,30 +74,4 @@ public class PanelLoginPageTest extends FunctionalTest {
         Assert.assertEquals(PanelLoginPage.WRONG_USER_MESSAGE, panelLoginPage.getPopupMessages().get(0).getText());
     }
 
-    @Test
-    public void testClickCanelButton(){
-        driver.get(PanelLoginPage.URL);
-
-        PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
-
-        panelLoginPage.clickCanelButton();
-
-        wait.until(ExpectedConditions.visibilityOf(panelLoginPage.getMenuButton()));
-        Assert.assertTrue(!panelLoginPage.isMenuVisible());
-    }
-
-    @Test
-    public void testClickMenuButton(){
-        driver.get(PanelLoginPage.URL);
-
-        PanelLoginPage panelLoginPage = new PanelLoginPage(driver);
-
-        panelLoginPage.clickCanelButton();
-
-
-        wait.until(ExpectedConditions.visibilityOf(panelLoginPage.getMenuButton()));
-
-        panelLoginPage.clickMenuButton();
-
-    }
 }

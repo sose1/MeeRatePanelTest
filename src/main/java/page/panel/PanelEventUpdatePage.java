@@ -11,7 +11,7 @@ import java.util.List;
 public class PanelEventUpdatePage extends PageObject {
 
     //todo DODAĆ URL
-    public static final String TITLE_PAGE = "Aktualziacja Wydarze";
+    public static final String TITLE_PAGE = "Aktualizacja wydarzenia";
     public static final String EMPTY_NAME_EVENT = "Nazwa Wydarzenia nie może pozostać bez wartości.";
     public static final String EMPTY_INFO_EVENT = "Opis nie może pozostać bez wartości.";
     public static final String EMPTY_START_DATE_EVENT = "Początek nie może pozostać bez wartości.";
